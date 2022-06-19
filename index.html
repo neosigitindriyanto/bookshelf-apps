@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  </head>
+
+  <body style="background-color: #c4ddff">
+    <header>
+      <nav class="navbar navbar-light" style="background-color: #7fb5ff">
+        <div class="container-fluid d-flex justify-content-center">
+          <h1 class="navbar-brand mb-0 d-block text-white fs-2">Bookshelf Apps</h1>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mt-5 d-flex">
+      <section class="input_section card card-body w-50 d-inline-block h-50">
+        <h2 class="text-center">Masukkan Buku Baru</h2>
+
+        <form action="#" id="form">
+          <div class="mb-3">
+            <label for="inputBookTitle" class="form-label">Judul</label>
+            <input type="text" class="form-control" id="inputBookTitle" required />
+          </div>
+          <div class="mb-3">
+            <label for="inputBookAuthor" class="form-label">Penulis</label>
+            <input type="text" class="form-control" id="inputBookAuthor" required />
+          </div>
+          <div class="mb-3">
+            <label for="inputBookYear" class="form-label">Tahun</label>
+            <input type="text" class="form-control" id="inputBookYear" required />
+          </div>
+          <div class="form-check d-inline-block me-3">
+            <input class="form-check-input" type="checkbox" value="" id="inputBookIsComplete" />
+            <label class="form-check-label" for="inputBookIsComplete"> Selesai Dibaca </label>
+          </div>
+          <button type="submit" class="btn btn-primary d-block text-center mt-3 mb-5 w-100">Submit</button>
+        </form>
+        <form id="searchBook">
+          <h2 class="text-center">Cari Buku</h2>
+
+          <input class="form-control me-2 mb-4" type="text" id="searchBookTitle" placeholder="Cari Judul Buku" aria-label="Search" />
+
+          <button class="btn btn-primary text-white text-center w-100" id="searchSubmit" type="submit">Cari</button>
+        </form>
+      </section>
+
+      <div class="w-50 d-flex postion-absolute">
+        <div class="d-flex">
+          <div class="w-100">
+            <section class="book_shelf container">
+              <h2 class="text-center card card-body">Belum Selesai Dibaca</h2>
+
+              <div id="incompleteBookshelfList" class="book_list"></div>
+            </section>
+          </div>
+          <div class="w-100">
+            <section class="book_shelf container">
+              <h2 class="text-center card card-body mb-5">Selesai Dibaca</h2>
+
+              <div id="completeBookshelfList" class="book_list"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
